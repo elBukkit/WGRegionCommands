@@ -4,3 +4,10 @@
 *.jar
 *.war
 *.ear
+
+# Maven Packaging
+target
+
+# IntelliJ Files
+*.iml
+.idea
