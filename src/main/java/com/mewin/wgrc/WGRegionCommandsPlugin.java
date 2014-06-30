@@ -45,6 +45,7 @@ public class WGRegionCommandsPlugin extends JavaPlugin {
         listener = new RegionListener(this);
         
         getServer().getPluginManager().registerEvents(listener, this);
+        getCommand("rcimport").setExecutor(new ImportCommand(this));
     }
 
     @Override

@@ -3,3 +3,13 @@ version: ${project.version}
 authors: [ mewin ]
 main: com.mewin.wgrc.WGRegionCommandsPlugin
 depend: [ WorldGuard, WGCustomFlags, WGRegionEvents ]
+commands:
+  rcimport:
+    description: Import Region Commands
+    usage: /rcimport <commands.yml>
+    permission: WGRegionCommands.rcimport
+permissions:
+  WGRegionCommands.rcimport:
+    description: Player may use /rcimport
+    type: boolean
+    default: op
