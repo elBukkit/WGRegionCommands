@@ -53,6 +53,7 @@ public class RegionListener implements Listener {
     {
         for (String cmd : cmds)
         {
+            cmd = cmd.replaceAll("@p", e.getPlayer().getName());
             cmd = cmd.replaceAll("\\{player\\}", e.getPlayer().getName());
             cmd = cmd.replaceAll("\\{region\\}", e.getRegion().getId());
             cmd = cmd.replaceAll("\\{comma\\}", ",");
