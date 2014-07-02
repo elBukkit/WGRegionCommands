@@ -1,8 +1,7 @@
 package com.mewin.wgrc;
 
-import com.mewin.WGRegionEvents.events.RegionEnteredEvent;
-import com.mewin.WGRegionEvents.events.RegionEvent;
-import com.mewin.WGRegionEvents.events.RegionLeftEvent;
+import com.mewin.WGRegionEvents.events.*;
+
 import java.util.Set;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.EventHandler;
@@ -22,7 +21,7 @@ public class RegionListener implements Listener {
     }
     
     @EventHandler
-    public void onRegionLeft(RegionLeftEvent e)
+    public void onRegionLeft(RegionLeaveEvent e)
     {
         if (e.getRegion().getFlag(WGRegionCommandsPlugin.PLAYER_COMMAND_LEAVE_FLAG) != null)
         {
@@ -36,7 +35,7 @@ public class RegionListener implements Listener {
     }
     
     @EventHandler
-    public void onRegionEntered(RegionEnteredEvent e)
+    public void onRegionEntered(RegionEnterEvent e)
     {
         if (e.getRegion().getFlag(WGRegionCommandsPlugin.PLAYER_COMMAND_ENTER_FLAG) != null)
         {
